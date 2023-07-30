@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    //var emp = ViewData["empdata"] as EmployeeModel;
+    var emps = ViewData["empdata"] as List<EmployeeModel>;
+
+}
+
+<div class="text-center">
+@*    <h1>@emp.Id</h1>
+    <h1>@emp.Name</h1>*@
+   
+    <table border="1" style="width:50%" >
+        <tr>
+            <th style="color:crimson">ID</th>
+            <th style ="color:aquamarine">Name</th>
+            
+        </tr>
+        @foreach (var item in emps)
+        {
+            <tr>
+                <td style="background-color:antiquewhite">@item.Id</td>
+                <td style ="background-color:aqua">@item.Name</td>
+            </tr>
+        }     
+    </table>
+</div>
